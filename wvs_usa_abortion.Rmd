@@ -1,0 +1,128 @@
+---
+output: 
+  pdf_document:
+    citation_package: natbib
+    keep_tex: false
+    fig_caption: true
+    latex_engine: xelatex
+    dev: cairo_pdf
+    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-ms.tex
+title: "A Simple Analysis of the Justifiability of Abortion Across Six Waves of World Values Survey Data"
+thanks: "Replication files are available on the author's Github account (http://github.com/svmiller). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: svmille@clemson.edu."
+author:
+- name: Steven V. Miller
+  affiliation: Clemson University
+abstract: "Sed sit amet lacus in velit blandit varius. Vestibulum vestibulum id arcu in porttitor. Integer gravida nibh nec dolor tempor tincidunt. Aenean condimentum nibh massa, ac facilisis ante luctus vel. Etiam et felis posuere, maximus velit quis, pulvinar eros. Praesent leo nunc, bibendum nec suscipit eget, convallis sed nibh. Fusce non dolor eleifend, consectetur urna a, cursus felis. Pellentesque a eleifend dui."
+keywords: "pandoc, r markdown, knitr"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+geometry: margin=1in
+fontfamily: mathpazo
+fontsize: 11pt
+# spacing: double
+bibliography: "`r paste0(Sys.getenv('HOME'),'/Dropbox/master.bib')`"
+biblio-style: apsr
+endnote: no
+---
+
+```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
+knitr::opts_chunk$set(cache=TRUE)
+knitr::opts_chunk$set(fig.path='figs/')
+knitr::opts_chunk$set(cache.path='_cache/') # holy hell there are a lot of these files.
+
+knitr::opts_chunk$set(
+                  fig.process = function(x) {
+                      x2 = sub('-\\d+([.][a-z]+)$', '\\1', x)
+                      if (file.rename(x, x2)) x2 else x
+                      }
+                  )
+```
+
+```{r loadstuff, include=FALSE}
+library(digest)
+library(tidyverse)
+library(RCurl)
+library(lme4)
+library(dotwhisker)
+library(stevemisc)
+library(broom)
+
+if (file.exists("data/data.rds")) {
+  Data <- readRDS("data/data.rds")
+} else {
+  source("src/1-load.R")
+  source("src/2-clean.R")
+}
+
+if (file.exists("data/models.rds")) {
+  Models <- readRDS("data/models.rds")
+} else {
+  source("src/3-analysis.R")
+}
+
+if (file.exists("data/sims.rds")) {
+  Sims <- readRDS("data/sims.rds")
+} else {
+  source("src/4-sims.R")
+}
+
+source("src/5-create-tabs-figs.R")
+
+# require(digest)
+# plyr::ldply(mget(ls()), digest) # Meh, I like this way better below.
+as.data.frame(do.call(rbind, lapply(mget(ls()), digest))) %>%
+  rownames_to_column() %>%
+  saveRDS(.,"data/md5s.rds")
+
+devtools::session_info() %>%
+    yaml::write_yaml("doc/sessioninfo.yaml")
+
+sink("doc/sessioninfo.txt")
+sessionInfo()
+sink()
+
+
+
+```
+
+
+# Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in dui non sapien pharetra maximus. In ut nunc molestie, imperdiet turpis id, accumsan quam. Suspendisse rutrum, arcu at blandit pharetra, nulla ligula semper felis, id porta arcu sem ut mi. Vestibulum feugiat aliquam augue, eget eleifend sem dapibus vel. Quisque tempor semper lacus vel consequat. Phasellus ipsum quam, porttitor in posuere eu, accumsan ut orci. Donec sed felis aliquet, suscipit nulla et, imperdiet dolor. Sed molestie est in metus pretium sollicitudin et vel lorem. Nullam neque eros, gravida id sem in, auctor lacinia metus. Fusce a aliquam est. Nulla facilisi. Mauris vitae orci sed neque fermentum pulvinar. Cras ultrices finibus bibendum.
+
+Vivamus eu finibus libero. Quisque congue, arcu non imperdiet luctus, odio urna faucibus turpis, ut sagittis ligula justo sit amet sem. Praesent consectetur, velit at tincidunt convallis, urna diam feugiat mi, ut porttitor felis risus blandit neque. Maecenas quis purus in ex blandit malesuada. Nam bibendum consectetur dui a posuere. Donec tincidunt enim eget scelerisque eleifend. Morbi in nisi placerat, efficitur augue et, imperdiet justo. Donec blandit imperdiet ante, nec ultricies tortor auctor vitae. Etiam eu elit aliquet, elementum magna eget, mattis nisl. Sed rhoncus, neque quis ultricies maximus, orci nulla varius dolor, placerat consequat nunc mauris a felis. Pellentesque lorem eros, sollicitudin a tellus vitae, efficitur accumsan elit. Sed convallis at risus ac suscipit. Suspendisse orci lacus, posuere vitae viverra quis, euismod at metus. Praesent cursus tincidunt magna vitae lacinia. Maecenas vel placerat diam, congue vehicula nisi. Duis ac scelerisque quam.
+
+Curabitur tristique nisi sapien, eget gravida neque sollicitudin sit amet. Vivamus tempor tortor tortor, non placerat eros tempus eu. Nam sed scelerisque nulla, vitae ultricies odio. In venenatis nibh lorem, quis condimentum est maximus blandit. Quisque pharetra, lacus ac pretium volutpat, elit massa vestibulum nisl, eget lacinia felis metus vestibulum libero. Aliquam quis quam nec enim malesuada pellentesque luctus sit amet tellus. Nulla facilisi. Suspendisse a vehicula nunc. Duis commodo id ipsum vitae sagittis. Donec feugiat placerat lectus quis varius. Nulla id ante eget risus viverra pulvinar. Nulla ac facilisis massa, in pretium sapien. Nunc interdum scelerisque ante at interdum. Suspendisse venenatis volutpat ultrices. Maecenas feugiat auctor neque sed interdum. Nulla faucibus nibh ac augue maximus, in efficitur ex laoreet.
+
+Nulla vel sollicitudin ex. Maecenas sodales maximus tortor, in lobortis urna condimentum at. Vestibulum arcu ligula, maximus in laoreet id, dapibus in magna. Praesent commodo, elit at finibus ullamcorper, augue purus consectetur metus, id placerat purus lacus sit amet ipsum. Donec fringilla augue elit, quis ultrices arcu commodo vel. Ut gravida, ex ac tempus imperdiet, ex tellus porttitor libero, commodo commodo sapien sapien nec erat. Cras a arcu sapien. Suspendisse vel consectetur lectus. Sed aliquam mi eget leo convallis, quis vehicula purus vehicula. Mauris cursus purus vitae metus cursus feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla sodales dui ac leo posuere bibendum. Vestibulum ac elit vitae nisl auctor tempor vel a est. Integer semper suscipit diam vitae egestas. Suspendisse at dapibus tortor.
+
+# Results
+
+ Sed a felis facilisis, volutpat sapien ut, vulputate arcu. Fusce bibendum varius mauris egestas lobortis. Donec faucibus a lorem id dictum. Nulla accumsan porta semper. Donec rutrum elementum nulla ac convallis. Pellentesque sollicitudin commodo quam nec porta. Donec hendrerit euismod blandit. Integer at erat vel nisi congue vehicula eget eu erat. Phasellus lacinia ligula ac orci volutpat imperdiet. Donec pharetra nulla mi, non porttitor tellus faucibus vitae. Nulla quis auctor nulla.
+
+Morbi efficitur nulla ligula, nec ornare turpis aliquet sed. Maecenas tempor sapien in lacus varius, id commodo purus eleifend. Vestibulum aliquet mollis mi, quis euismod risus auctor nec. Nam id feugiat arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam posuere placerat bibendum. Nunc in tellus commodo, finibus orci non, porttitor ex. Nulla malesuada est sollicitudin ante maximus semper. Donec ac justo at nisl iaculis iaculis. Mauris molestie a augue id facilisis. Cras enim justo, hendrerit ac metus eget, lacinia posuere nisl.
+
+
+
+
+
+```{r plot_models, fig.width=11, fig.height = 7, echo=F, fig.cap="Dot and Whisker Plots of the Two Models I Estimated that Are Totally Cool and Awesome"}
+plot_models
+```
+
+
+The *t*-statistic associated with the importance of god coefficient is `r round(tidy(Models[[1]])[7,4], 3)` in the linear model and the *z*-statistic for the same coefficient is `r round(tidy(Models[[2]])[7,4], 3)` in the logistic model. The precision of both statistics suggests an effect that we can comfortably discern from zero.
+
+
+Pellentesque dignissim mi a enim tincidunt, id laoreet urna efficitur. Donec porttitor nisl vitae molestie interdum. Morbi a ipsum tellus. Morbi ac eleifend ex. Curabitur ut tincidunt nisi. In cursus nulla ut felis hendrerit, at faucibus elit ullamcorper. Fusce eget sagittis felis, a suscipit massa. Duis sit amet nulla fermentum, iaculis nisl sollicitudin, euismod nisl. Phasellus felis risus, dapibus in tristique a, fermentum id ex. Nunc tincidunt elementum odio. Donec accumsan, tortor et ullamcorper consequat, nibh nisl finibus ante, vel pulvinar est nibh at augue.
+
+Nam pretium sapien leo, eget ullamcorper elit pretium eget. Nunc sit amet risus a metus imperdiet tempor. Quisque eget enim sapien. Fusce at velit nec nibh viverra varius. Phasellus varius varius tellus, a molestie nisi. Suspendisse sodales nec orci eu ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi ac diam vitae mauris iaculis congue et sit amet enim. Suspendisse faucibus magna sed ligula pulvinar, a tempus neque accumsan. Nulla id velit dui.
+
+Nulla at nibh maximus, consequat purus a, malesuada libero. Nulla orci ipsum, consequat vitae erat id, egestas scelerisque ipsum. Fusce vel elit diam. Curabitur et ligula venenatis mauris pellentesque porta at id nunc. Nam dictum tellus vitae velit varius, eget ullamcorper risus luctus. Sed vitae libero sed ex iaculis fermentum a at nisl. Duis lacus lectus, ultricies at tincidunt nec, varius non dui. Vivamus venenatis risus eu dolor fermentum, et interdum ipsum imperdiet.
+
+Curabitur vel tortor porta, dignissim mauris et, laoreet nibh. Cras dapibus id diam rutrum ultrices. Aliquam vestibulum dui non suscipit tristique. Morbi tristique libero ut libero consectetur cursus. Proin pulvinar purus eget congue fringilla. Vestibulum luctus efficitur ante, et elementum ligula laoreet pellentesque. Donec sed dolor accumsan, feugiat magna vel, mollis ligula. Vivamus sollicitudin elit at velit fermentum, id vestibulum purus vulputate. Nam ex quam, luctus ac aliquam eu, lobortis sit amet purus. 
+
+```{r plot_sims, fig.width=11, fig.height=6, echo=F, fig.cap="Simulated Values of the Justifiability of Abortion by the Importance of God in the Respondent's Life"}
+plot_sims
+```
+
+

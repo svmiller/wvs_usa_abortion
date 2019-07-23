@@ -1,0 +1,968 @@
+platform:
+  version: R version 3.5.3 (2019-03-11)
+  os: Ubuntu 18.04.2 LTS
+  system: x86_64, linux-gnu
+  ui: X11
+  language: en_US
+  collate: en_US.UTF-8
+  ctype: en_US.UTF-8
+  tz: America/New_York
+  date: '2019-07-23'
+packages:
+  package:
+  - assertthat
+  - backports
+  - base64url
+  - bitops
+  - boot
+  - broom
+  - callr
+  - cellranger
+  - cli
+  - colorspace
+  - crayon
+  - desc
+  - devtools
+  - digest
+  - dotwhisker
+  - dplyr
+  - drake
+  - evaluate
+  - filelock
+  - forcats
+  - fs
+  - generics
+  - ggplot2
+  - ggstance
+  - glue
+  - gtable
+  - haven
+  - hms
+  - htmltools
+  - httr
+  - igraph
+  - jsonlite
+  - knitr
+  - lattice
+  - lazyeval
+  - lme4
+  - lubridate
+  - magrittr
+  - MASS
+  - Matrix
+  - memoise
+  - minqa
+  - modelr
+  - munsell
+  - nlme
+  - nloptr
+  - pillar
+  - pkgbuild
+  - pkgconfig
+  - pkgload
+  - prettyunits
+  - processx
+  - ps
+  - purrr
+  - R6
+  - Rcpp
+  - RCurl
+  - readr
+  - readxl
+  - remotes
+  - RevoUtils
+  - RevoUtilsMath
+  - rlang
+  - rmarkdown
+  - rprojroot
+  - rstudioapi
+  - rvest
+  - scales
+  - sessioninfo
+  - stevemisc
+  - storr
+  - stringi
+  - stringr
+  - testthat
+  - tibble
+  - tidyr
+  - tidyselect
+  - tidyverse
+  - txtq
+  - usethis
+  - vctrs
+  - withr
+  - xfun
+  - xml2
+  - yaml
+  - zeallot
+  ondiskversion:
+  - 0.2.1
+  - 1.1.4
+  - '1.4'
+  - 1.0.6
+  - 1.3.20
+  - 0.5.2
+  - 3.3.0
+  - 1.1.0
+  - 1.1.0
+  - 1.4.1
+  - 1.3.4
+  - 1.2.0
+  - 2.1.0
+  - 0.6.20
+  - 0.5.0
+  - 0.8.3
+  - 7.5.2
+  - '0.14'
+  - 1.0.2
+  - 0.4.0
+  - 1.3.1
+  - 0.0.2
+  - 3.2.0
+  - 0.3.2
+  - 1.3.1
+  - 0.3.0
+  - 2.1.1
+  - 0.5.0
+  - 0.3.6
+  - 1.4.0
+  - 1.2.4.1
+  - '1.5'
+  - '1.23'
+  - 0.20.38
+  - 0.2.2
+  - 1.1.21
+  - 1.7.4
+  - '1.5'
+  - 7.3.51.1
+  - 1.2.15
+  - 1.1.0
+  - 1.2.4
+  - 0.1.4
+  - 0.5.0
+  - 3.1.137
+  - 1.2.1
+  - 1.4.2
+  - 1.0.3
+  - 2.0.2
+  - 1.0.2
+  - 1.0.2
+  - 3.4.0
+  - 1.3.0
+  - 0.3.2
+  - 2.4.0
+  - 1.0.1
+  - 1.95.4.12
+  - 1.3.1
+  - 1.3.1
+  - 2.1.0
+  - 11.0.3
+  - 11.0.0
+  - 0.4.0
+  - '1.14'
+  - 1.3.2
+  - '0.10'
+  - 0.3.4
+  - 1.0.0
+  - 1.1.1
+  - 0.1.5.3
+  - 1.2.1
+  - 1.4.3
+  - 1.4.0
+  - 2.1.1
+  - 2.1.3
+  - 0.8.3
+  - 0.2.5
+  - 1.2.1
+  - 0.1.4
+  - 1.5.1
+  - 0.2.0
+  - 2.1.2
+  - '0.8'
+  - 1.2.0
+  - 2.2.0
+  - 0.1.0
+  loadedversion:
+  - 0.2.1
+  - 1.1.4
+  - '1.4'
+  - 1.0-6
+  - 1.3-20
+  - 0.5.2
+  - 3.3.0
+  - 1.1.0
+  - 1.1.0
+  - 1.4-1
+  - 1.3.4
+  - 1.2.0
+  - 2.1.0
+  - 0.6.20
+  - 0.5.0
+  - 0.8.3
+  - 7.5.2
+  - '0.14'
+  - 1.0.2
+  - 0.4.0
+  - 1.3.1
+  - 0.0.2
+  - 3.2.0
+  - 0.3.2
+  - 1.3.1
+  - 0.3.0
+  - 2.1.1
+  - 0.5.0
+  - 0.3.6
+  - 1.4.0
+  - 1.2.4.1
+  - '1.5'
+  - '1.23'
+  - 0.20-38
+  - 0.2.2
+  - 1.1-21
+  - 1.7.4
+  - '1.5'
+  - 7.3-51.1
+  - 1.2-15
+  - 1.1.0
+  - 1.2.4
+  - 0.1.4
+  - 0.5.0
+  - 3.1-137
+  - 1.2.1
+  - 1.4.2
+  - 1.0.3
+  - 2.0.2
+  - 1.0.2
+  - 1.0.2
+  - 3.4.0
+  - 1.3.0
+  - 0.3.2
+  - 2.4.0
+  - 1.0.1
+  - 1.95-4.12
+  - 1.3.1
+  - 1.3.1
+  - 2.1.0
+  - 11.0.3
+  - 11.0.0
+  - 0.4.0
+  - '1.14'
+  - 1.3-2
+  - '0.10'
+  - 0.3.4
+  - 1.0.0
+  - 1.1.1
+  - 0.1.5.3
+  - 1.2.1
+  - 1.4.3
+  - 1.4.0
+  - 2.1.1
+  - 2.1.3
+  - 0.8.3
+  - 0.2.5
+  - 1.2.1
+  - 0.1.4
+  - 1.5.1
+  - 0.2.0
+  - 2.1.2
+  - '0.8'
+  - 1.2.0
+  - 2.2.0
+  - 0.1.0
+  path:
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/assertthat
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/backports
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/base64url
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/bitops
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/boot
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/broom
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/callr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/cellranger
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/cli
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/colorspace
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/crayon
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/desc
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/devtools
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/digest
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/dotwhisker
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/dplyr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/drake
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/evaluate
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/filelock
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/forcats
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/fs
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/generics
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/ggplot2
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/ggstance
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/glue
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/gtable
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/haven
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/hms
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/htmltools
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/httr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/igraph
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/jsonlite
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/knitr
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/lattice
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/lazyeval
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/lme4
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/lubridate
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/magrittr
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/MASS
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/Matrix
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/memoise
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/minqa
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/modelr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/munsell
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/nlme
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/nloptr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/pillar
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/pkgbuild
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/pkgconfig
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/pkgload
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/prettyunits
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/processx
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/ps
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/purrr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/R6
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/Rcpp
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/RCurl
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/readr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/readxl
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/remotes
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/RevoUtils
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/RevoUtilsMath
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/rlang
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/rmarkdown
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/rprojroot
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/rstudioapi
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/rvest
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/scales
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/sessioninfo
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/stevemisc
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/storr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/stringi
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/stringr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/testthat
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/tibble
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/tidyr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/tidyselect
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/tidyverse
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/txtq
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/usethis
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/vctrs
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/withr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/xfun
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/xml2
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/yaml
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/zeallot
+  loadedpath:
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/assertthat
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/backports
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/base64url
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/bitops
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/boot
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/broom
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/callr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/cellranger
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/cli
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/colorspace
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/crayon
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/desc
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/devtools
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/digest
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/dotwhisker
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/dplyr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/drake
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/evaluate
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/filelock
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/forcats
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/fs
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/generics
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/ggplot2
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/ggstance
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/glue
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/gtable
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/haven
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/hms
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/htmltools
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/httr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/igraph
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/jsonlite
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/knitr
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/lattice
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/lazyeval
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/lme4
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/lubridate
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/magrittr
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/MASS
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/Matrix
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/memoise
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/minqa
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/modelr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/munsell
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/nlme
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/nloptr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/pillar
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/pkgbuild
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/pkgconfig
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/pkgload
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/prettyunits
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/processx
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/ps
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/purrr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/R6
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/Rcpp
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/RCurl
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/readr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/readxl
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/remotes
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/RevoUtils
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/RevoUtilsMath
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/rlang
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/rmarkdown
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/rprojroot
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/rstudioapi
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/rvest
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/scales
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/sessioninfo
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/stevemisc
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/storr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/stringi
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/stringr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/testthat
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/tibble
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/tidyr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/tidyselect
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/tidyverse
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/txtq
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/usethis
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/vctrs
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/withr
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/xfun
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/xml2
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/yaml
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/zeallot
+  attached:
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - yes
+  - yes
+  - yes
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - yes
+  - yes
+  - no
+  - no
+  - yes
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - yes
+  - no
+  - yes
+  - yes
+  - yes
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  is_base:
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  date:
+  - '2019-03-21'
+  - '2019-04-10'
+  - '2018-05-14'
+  - '2013-08-17'
+  - '2017-08-06'
+  - '2019-04-07'
+  - '2019-07-04'
+  - '2016-07-27'
+  - '2019-03-19'
+  - '2019-03-18'
+  - '2017-09-16'
+  - '2018-05-01'
+  - '2019-07-06'
+  - '2019-07-04'
+  - '2018-06-27'
+  - '2019-07-04'
+  - '2019-07-21'
+  - '2019-05-28'
+  - '2018-10-05'
+  - '2019-02-17'
+  - '2019-05-06'
+  - '2018-11-29'
+  - '2019-06-16'
+  - '2019-06-24'
+  - '2019-03-12'
+  - '2019-03-25'
+  - '2019-07-04'
+  - '2019-07-09'
+  - '2017-04-28'
+  - '2018-12-11'
+  - '2019-04-22'
+  - '2017-06-01'
+  - '2019-05-18'
+  - '2018-11-04'
+  - '2019-03-15'
+  - '2019-03-05'
+  - '2018-04-11'
+  - '2014-11-22'
+  - '2018-11-01'
+  - '2018-11-01'
+  - '2017-04-21'
+  - '2014-10-09'
+  - '2019-02-18'
+  - '2018-06-12'
+  - '2018-04-07'
+  - '2018-10-03'
+  - '2019-06-29'
+  - '2019-03-20'
+  - '2018-08-16'
+  - '2018-10-29'
+  - '2015-07-13'
+  - '2019-07-03'
+  - '2018-12-21'
+  - '2019-03-15'
+  - '2019-02-14'
+  - '2019-03-17'
+  - '2019-03-04'
+  - '2018-12-21'
+  - '2019-03-13'
+  - '2019-06-24'
+  - '2019-05-10'
+  - '2019-05-08'
+  - '2019-06-25'
+  - '2019-07-12'
+  - '2018-01-03'
+  - '2019-03-19'
+  - '2019-05-15'
+  - '2018-08-09'
+  - '2018-11-05'
+  - '2019-07-17'
+  - '2018-10-18'
+  - '2019-03-12'
+  - '2019-02-10'
+  - '2019-04-23'
+  - '2019-06-06'
+  - '2019-03-01'
+  - '2018-10-11'
+  - '2017-11-14'
+  - '2019-07-19'
+  - '2019-07-04'
+  - '2019-07-05'
+  - '2018-03-15'
+  - '2019-06-25'
+  - '2018-01-24'
+  - '2018-07-25'
+  - '2018-01-28'
+  source:
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - local
+  - local
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - local
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  - CRAN (R 3.5.3)
+  md5ok:
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  - .na
+  library:
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
