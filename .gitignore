@@ -22,6 +22,7 @@
 # ignore my old files and other irrelevant directories
 _cache
 _dross
+readings
 
 # don't ignore the .gitignore file
 !.gitignore
