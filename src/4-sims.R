@@ -1,4 +1,3 @@
-library(modelr)
 data_grid(Data,
           .model=Models[[1]],
           ajd = 0, aj = 0,

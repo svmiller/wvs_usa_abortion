@@ -7,7 +7,7 @@ platform:
   collate: en_US.UTF-8
   ctype: en_US.UTF-8
   tz: America/New_York
-  date: '2019-07-23'
+  date: '2019-07-24'
 packages:
   package:
   - assertthat
@@ -19,6 +19,7 @@ packages:
   - callr
   - cellranger
   - cli
+  - codetools
   - colorspace
   - crayon
   - desc
@@ -106,6 +107,7 @@ packages:
   - 3.3.0
   - 1.1.0
   - 1.1.0
+  - 0.2.16
   - 1.4.1
   - 1.3.4
   - 1.2.0
@@ -193,6 +195,7 @@ packages:
   - 3.3.0
   - 1.1.0
   - 1.1.0
+  - 0.2-16
   - 1.4-1
   - 1.3.4
   - 1.2.0
@@ -280,6 +283,7 @@ packages:
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/callr
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/cellranger
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/cli
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/codetools
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/colorspace
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/crayon
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/desc
@@ -367,6 +371,7 @@ packages:
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/callr
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/cellranger
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/cli
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library/codetools
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/colorspace
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/crayon
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5/desc
@@ -458,29 +463,26 @@ packages:
   - no
   - no
   - no
-  - yes
-  - yes
-  - yes
-  - yes
   - no
-  - no
+  - yes
+  - yes
+  - yes
   - yes
   - no
   - no
   - yes
   - no
   - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
   - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
   - no
   - no
   - no
@@ -488,6 +490,10 @@ packages:
   - no
   - no
   - no
+  - yes
+  - no
+  - no
+  - yes
   - no
   - no
   - no
@@ -618,6 +624,7 @@ packages:
   - no
   - no
   - no
+  - no
   date:
   - '2019-03-21'
   - '2019-04-10'
@@ -628,6 +635,7 @@ packages:
   - '2019-07-04'
   - '2016-07-27'
   - '2019-03-19'
+  - '2018-12-24'
   - '2019-03-18'
   - '2017-09-16'
   - '2018-05-01'
@@ -706,6 +714,7 @@ packages:
   - '2018-07-25'
   - '2018-01-28'
   source:
+  - CRAN (R 3.5.3)
   - CRAN (R 3.5.3)
   - CRAN (R 3.5.3)
   - CRAN (R 3.5.3)
@@ -879,6 +888,7 @@ packages:
   - .na
   - .na
   - .na
+  - .na
   library:
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
@@ -889,6 +899,7 @@ packages:
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
+  - /opt/microsoft/ropen/3.5.3/lib64/R/library
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5
   - /home/steve/R/x86_64-pc-linux-gnu-library/3.5

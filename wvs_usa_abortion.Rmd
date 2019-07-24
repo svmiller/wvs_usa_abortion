@@ -24,28 +24,33 @@ biblio-style: apsr
 endnote: no
 ---
 
-```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
-knitr::opts_chunk$set(cache=TRUE)
-knitr::opts_chunk$set(fig.path='figs/')
-knitr::opts_chunk$set(cache.path='_cache/') # holy hell there are a lot of these files.
-
-knitr::opts_chunk$set(
-                  fig.process = function(x) {
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE,
+                      message=FALSE, warning=FALSE,
+                      fig.path='figs/',
+                      cache.path = '_cache/',
+                      fig.process = function(x) {
                       x2 = sub('-\\d+([.][a-z]+)$', '\\1', x)
                       if (file.rename(x, x2)) x2 else x
-                      }
-                  )
+                      })
+
+# knitr::opts_chunk$set(
+#                   
+#                   )
 ```
 
-```{r loadstuff, include=FALSE}
-library(digest)
+```{r loadlibaries, include=FALSE}
 library(tidyverse)
+library(stevemisc)
 library(RCurl)
 library(lme4)
 library(dotwhisker)
-library(stevemisc)
 library(broom)
+library(modelr)
+library(digest)
+```
 
+```{r source, include=FALSE}
 if (file.exists("data/data.rds")) {
   Data <- readRDS("data/data.rds")
 } else {
@@ -64,7 +69,9 @@ if (file.exists("data/sims.rds")) {
 } else {
   source("src/4-sims.R")
 }
+```
 
+```{r createtabsfigs, include=FALSE}
 source("src/5-create-tabs-figs.R")
 
 # require(digest)
@@ -79,8 +86,6 @@ devtools::session_info() %>%
 sink("doc/sessioninfo.txt")
 sessionInfo()
 sink()
-
-
 
 ```
 
