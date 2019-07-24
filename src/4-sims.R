@@ -16,9 +16,9 @@ merTools::predictInterval(Models[[1]],
                           newdata=newdat_zgod, 
                           include.resid.var=F,
                           n.sims=1000, seed=8675309,
-                          returnSims = TRUE) -> hold_these_sims
+                          returnSims = TRUE) -> M1_summarysims
 
-attributes(hold_these_sims)$sim.results %>%
+attributes(M1_summarysims)$sim.results %>%
   data.frame() %>% tbl_df() %>%
   bind_cols(.,newdat_zgod) %>% 
   mutate(godimportant = seq(1, 10)) %>%
@@ -33,10 +33,10 @@ merTools::predictInterval(Models[[2]],
                           include.resid.var=F,
                           n.sims=1000, seed=8675309,
                           type = "probability",
-                          returnSims = TRUE) -> hold_these_sims
+                          returnSims = TRUE) -> M2_summarysims
 
 
-attributes(hold_these_sims)$sim.results %>%
+attributes(M2_summarysims)$sim.results %>%
   data.frame() %>% tbl_df() %>%
   bind_cols(.,newdat_zgod) %>% 
   mutate(godimportant = seq(1, 10)) %>%
