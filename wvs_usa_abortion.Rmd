@@ -73,7 +73,9 @@ if (file.exists("data/sims.rds")) {
 
 ```{r createtabsfigs, include=FALSE}
 source("src/5-create-tabs-figs.R")
+```
 
+```{r sessioninfo, include=FALSE}
 # require(digest)
 # plyr::ldply(mget(ls()), digest) # Meh, I like this way better below.
 as.data.frame(do.call(rbind, lapply(mget(ls()), digest))) %>%

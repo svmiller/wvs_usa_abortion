@@ -9,7 +9,9 @@ tidy(Models[[2]]) %>% mutate(model = "Logistic Mixed Effects") %>%
 
 bind_rows(M1df, M2df) %>%
   filter(term != "(Intercept)") %>%
-  dwplot(.)  %>%
+  dwplot(.,
+         dot_args = list(aes(shape = model),
+                         size = 3))  %>%
   relabel_predictors(c(
     z_age = "Age",
     female = "Female",
@@ -19,8 +21,9 @@ bind_rows(M1df, M2df) %>%
     z_god = "Importance of God"
   )) +
   theme_steve_web() +
-  labs(color = "Model") + 
-  geom_vline(xintercept = 0, linetype="dashed") -> plot_models
+  labs(color = "Model",
+       shape = "Model") + 
+  geom_vline(xintercept = 0, linetype="dashed")  -> plot_models
 
 
 Sims %>%
