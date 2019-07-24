@@ -68,14 +68,14 @@ if (file.exists("data/sims.rds")) {
   Sims <- readRDS("data/sims.rds")
 } else {
   source("src/4-sims.R")
-}
+} 
 ```
 
 ```{r createtabsfigs, include=FALSE}
 source("src/5-create-tabs-figs.R")
 ```
 
-```{r sessioninfo, include=FALSE}
+```{r reproducibility_stuff, include=FALSE}
 # require(digest)
 # plyr::ldply(mget(ls()), digest) # Meh, I like this way better below.
 as.data.frame(do.call(rbind, lapply(mget(ls()), digest))) %>%
